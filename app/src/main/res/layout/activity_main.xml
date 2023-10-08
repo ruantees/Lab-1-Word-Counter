@@ -10,11 +10,12 @@
         android:id="@+id/count_result_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="16dp"
+        android:text="@string/text_view_initial"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/count_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/count_button"
@@ -29,20 +30,19 @@
         android:id="@+id/char_spinner"
         android:layout_width="407dp"
         android:layout_height="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/text_input"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/text_input"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:ems="20"
-        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="576dp"
         android:hint="@string/text_input_hint"
-        app:layout_constraintBottom_toTopOf="@+id/count_button"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/char_spinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

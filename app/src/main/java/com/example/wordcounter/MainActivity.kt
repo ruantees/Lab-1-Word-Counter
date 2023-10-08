@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val textInput = findViewById<EditText>(R.id.text_input)
+        textInput.maxLines = 5
         val charSpinner = findViewById<Spinner>(R.id.char_spinner)
         val countButton = findViewById<Button>(R.id.count_button)
         val countResultView = findViewById<TextView>(R.id.count_result_view)
