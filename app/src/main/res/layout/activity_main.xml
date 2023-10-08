@@ -42,6 +42,7 @@
         android:hint="@string/text_input_hint"
         app:layout_constraintBottom_toTopOf="@+id/count_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

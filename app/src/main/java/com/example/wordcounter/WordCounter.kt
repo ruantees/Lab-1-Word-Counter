@@ -2,7 +2,7 @@ package com.example.wordcounter
 
 class WordCounter {
     companion object {
-        fun getCharCount(textInputString: String): Any {
+        fun getCharCount(textInputString: String): Int {
             return textInputString.length
         }
 
@@ -18,7 +18,7 @@ class WordCounter {
             return found
         }
 
-        fun getWordCount(textInputString: String): Any {
+        fun getWordCount(textInputString: String): Int {
             var wordCount = 0
             val wordSeparators = arrayOf(' ', ',', '.')
             var isScanning = false

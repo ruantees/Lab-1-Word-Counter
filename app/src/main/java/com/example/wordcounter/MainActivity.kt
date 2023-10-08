@@ -33,7 +33,18 @@ class MainActivity : AppCompatActivity() {
 
         countButton.setOnClickListener {
             val textInputString = textInput.text.toString()
-            val count = WordCounter.getWordCount(textInputString)
+            val chosenOptionSpinner = charSpinner.selectedItem.toString()
+            var count = 0
+
+            val resources = resources
+            val countOptionsArray = resources.getStringArray(R.array.count_options)
+
+            if (chosenOptionSpinner == countOptionsArray[0]){
+                count = WordCounter.getWordCount(textInputString)
+            }
+            else if(chosenOptionSpinner == countOptionsArray[1]){
+                count = WordCounter.getCharCount(textInputString)
+            }
             countResultView.text = count.toString()
         }
     }
