@@ -33,12 +33,8 @@ class MainActivity : AppCompatActivity() {
 
         countButton.setOnClickListener {
             val textInputString = textInput.text.toString()
-            val count = WordCounter.getCharCount(textInputString)
+            val count = WordCounter.getWordCount(textInputString)
             countResultView.text = count.toString()
         }
     }
-
-
-
-
 }
