@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +40,10 @@ class MainActivity : AppCompatActivity() {
             val resources = resources
             val countOptionsArray = resources.getStringArray(R.array.count_options)
 
-            if (chosenOptionSpinner == countOptionsArray[0]){
+            if (textInputString.isEmpty()){
+                Toast.makeText(this, "Empty Input", Toast.LENGTH_SHORT).show()
+            }
+            else if (chosenOptionSpinner == countOptionsArray[0]){
                 count = WordCounter.getWordCount(textInputString)
             }
             else if(chosenOptionSpinner == countOptionsArray[1]){
